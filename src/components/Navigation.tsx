@@ -1,5 +1,6 @@
 import { useCallback, type MouseEvent } from "react";
 import { NavLink } from "../components/NavLink";
+import ThemeToggle from "./ui/ThemeToggle";
 
 const SECTIONS = [
   { label: "About", id: "about" },
@@ -17,7 +18,7 @@ const Navigation = () => {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    window.history.replaceState(null, "", `#${id}`);
+    window.history.replaceState(null, "", `${id}`);
   }, []);
 
   const handleHome = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
@@ -47,8 +48,11 @@ const Navigation = () => {
           ))}
         </div>
 
-        <div className="font-mono text-xs text-muted-foreground">
-          ready to build
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <div className="font-mono text-xs text-muted-foreground">
+            ready to build
+          </div>
         </div>
       </div>
     </nav>

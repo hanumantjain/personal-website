@@ -31,9 +31,18 @@ const About = () => {
               <h3 className="text-xl font-semibold mb-6">Tech Stack</h3>
               <div className="space-y-4">
                 <div>
-                  <div className="code-tag mb-2">Frontend</div>
+                  <div className="code-tag mb-2">Programming Languages</div>
                   <div className="flex flex-wrap gap-2">
-                    {["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"].map((tech) => (
+                    {[
+                      "Python",
+                      "JavaScript (ES6+)",
+                      "TypeScript",
+                      "MySQL",
+                      "HTML5",
+                      "CSS3",
+                      "MongoDB",
+                      "PostgreSQL",
+                    ].map((tech) => (
                       <span key={tech} className="px-3 py-1 bg-secondary text-sm rounded">
                         {tech}
                       </span>
@@ -42,9 +51,17 @@ const About = () => {
                 </div>
   
                 <div>
-                  <div className="code-tag mb-2">Backend</div>
+                  <div className="code-tag mb-2">Frameworks & Libraries</div>
                   <div className="flex flex-wrap gap-2">
-                    {["Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL"].map((tech) => (
+                    {[
+                      "React.js",
+                      "Next.js",
+                      "Node.js",
+                      "Express.js",
+                      "FastAPI",
+                      "Redux",
+                      "Tailwind CSS",
+                    ].map((tech) => (
                       <span key={tech} className="px-3 py-1 bg-secondary text-sm rounded">
                         {tech}
                       </span>
@@ -53,9 +70,42 @@ const About = () => {
                 </div>
   
                 <div>
-                  <div className="code-tag mb-2">Tools</div>
+                  <div className="code-tag mb-2">DevOps / CI-CD Tools</div>
                   <div className="flex flex-wrap gap-2">
-                    {["Git", "Docker", "AWS", "Vercel", "Figma"].map((tech) => (
+                    {[
+                      "Jenkins",
+                      "GitHub Actions",
+                      "Docker",
+                      "AWS (EC2, S3, Lambda, RDS, IAM)",
+                    ].map((tech) => (
+                      <span key={tech} className="px-3 py-1 bg-secondary text-sm rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <div className="code-tag mb-2">Software & Tools</div>
+                  <div className="flex flex-wrap gap-2">
+                    {["Visual Studio", "Cursor", "Git", "Google Colab"].map((tech) => (
+                      <span key={tech} className="px-3 py-1 bg-secondary text-sm rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <div className="code-tag mb-2">Expertise</div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "REST APIs",
+                      "Generative AI",
+                      "Agentic AI",
+                      "Responsive Web Design",
+                      "Agile",
+                    ].map((tech) => (
                       <span key={tech} className="px-3 py-1 bg-secondary text-sm rounded">
                         {tech}
                       </span>

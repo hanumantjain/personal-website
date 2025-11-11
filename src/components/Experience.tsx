@@ -21,10 +21,10 @@ const experiences: Experience[] = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 bg-secondary/30">
+    <section id="experience" className="py-24 px-6 ">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
-          <span className="section-number">03</span>
+          <span className="section-number">02</span>
           <div className="h-px flex-1 bg-border" />
           <span className="code-tag">experience.json</span>
         </div>
@@ -32,7 +32,7 @@ const Experience = () => {
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="border-l-2 border-border pl-6 relative">
-              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-foreground" />
+              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent ring-2 ring-border" />
 
               <div className="space-y-3">
                 <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
