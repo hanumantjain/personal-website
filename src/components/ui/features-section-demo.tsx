@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "@/lib/utils";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -10,7 +9,13 @@ type FeatureItem = {
   demoHref?: string | null;
 };
 
-export function FeaturesSectionDemo({ items }: { items?: FeatureItem[] }) {
+export function FeaturesSectionDemo({
+  items,
+  className,
+}: {
+  items?: FeatureItem[];
+  className?: string;
+}) {
   const defaultFeatures: FeatureItem[] = [
     {
       title: "Built for developers",
@@ -54,7 +59,7 @@ export function FeaturesSectionDemo({ items }: { items?: FeatureItem[] }) {
   const features = items ?? defaultFeatures;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2  relative z-10 py-10 max-w-7xl mx-auto">
+    <div className={cn("grid grid-cols-1 md:grid-cols-2  relative z-10 py-10 max-w-7xl mx-auto", className)}>
       {features.map((feature, index) => (
         <Feature key={feature.title} {...feature} index={index} />
       ))}
