@@ -104,6 +104,15 @@ const rawProjects: RawProject[] = [
     website: "https://katabot.netlify.app/",
     github: "https://github.com/hanumantjain/katanbot",
   },
+  {
+    id: "10",
+    name: "GalleryAI",
+    description:
+      "AI-powered image gallery with image generation, image editing, and image search capabilities.",
+    tools: "AWS, S3, CloudFront, API Gateway, Amazon RDS, Jenkins,Lambda, React, TypeScript, TailwindCSS",
+    website: "https://galleryai.hanumantjain.tech/",
+    github: "https://github.com/hanumantjain/social-hub",
+  },
 ];
 
 const splitTools = (tools: string): string[] =>

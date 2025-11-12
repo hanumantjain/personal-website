@@ -29,12 +29,12 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <NavLink to="/" onClick={handleHome} className="font-mono text-lg font-semibold">
+      <div className="max-w-7xl mx-auto px-6 py-3 md:py-4 flex items-center justify-between">
+        <NavLink to="/" onClick={handleHome} className="font-mono text-base md:text-lg font-semibold">
           hanumant<span className="text-muted-foreground">()</span>
         </NavLink>
         
-        <div className="flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8">
           {SECTIONS.map((section) => (
             <NavLink
               key={section.id}
@@ -48,9 +48,9 @@ const Navigation = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 md:gap-4">
           <ThemeToggle />
-          <div className="font-mono text-xs text-muted-foreground">
+          <div className="hidden md:block font-mono text-xs text-muted-foreground">
             ready to build
           </div>
         </div>
