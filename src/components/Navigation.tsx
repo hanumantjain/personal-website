@@ -1,6 +1,7 @@
 import { useCallback, type MouseEvent } from "react";
 import { NavLink } from "../components/NavLink";
 import ThemeToggle from "./ui/ThemeToggle";
+import resume from "../assets/Hanumant_Resume.pdf";
 
 const SECTIONS = [
   { label: "About", id: "about" },
@@ -49,10 +50,15 @@ const Navigation = () => {
         </div>
 
         <div className="flex items-center gap-3 md:gap-4">
+          <a
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block font-mono text-sm text-foreground hover:underline cursor-pointer"
+          >
+            Resume
+          </a>
           <ThemeToggle />
-          <div className="hidden md:block font-mono text-xs text-muted-foreground">
-            ready to build
-          </div>
         </div>
       </div>
     </nav>

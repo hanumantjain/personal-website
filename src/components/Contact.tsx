@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-6">
+    <section id="contact" className="pt-16 pb-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <span className="section-number">04</span>
