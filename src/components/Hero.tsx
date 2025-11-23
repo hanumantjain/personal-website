@@ -15,7 +15,7 @@ const Hero = () => {
               {/* <span className="text-foreground">[</span> */}
               <span className="text-muted-foreground">
               <TypewriterText
-                words={["Full-Stack Developer", "Software Engineer", "Problem Solver"]}
+                words={["Full-Stack Developer", "Software Engineer", "Cloud Engineer"]}
                 className="text-muted-foreground"
                 textClassName="text-muted-foreground font-normal"
                 cursorClassName="bg-muted-foreground"

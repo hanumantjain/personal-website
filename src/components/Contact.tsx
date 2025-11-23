@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -41,7 +41,7 @@ const Contact = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/hanumantjain"
+                href="https://linkedin.com/in/hanumant-jain"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
