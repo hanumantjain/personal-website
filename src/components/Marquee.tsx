@@ -65,10 +65,10 @@ const Marquee = ({ items, speedPxPerSecond = 50, initialDuplicates = 2 }: Marque
   }, [speedPxPerSecond]);
 
   return (
-    <div ref={containerRef} className="relative overflow-hidden">
-      <div ref={trackRef} className="flex gap-2 whitespace-nowrap will-change-transform">
+    <div ref={containerRef} className="relative overflow-hidden w-full">
+      <div ref={trackRef} className="flex gap-1 sm:gap-1.5 md:gap-2 whitespace-nowrap will-change-transform">
         {seededItems.map((tech, idx) => (
-          <span key={`${tech}-${idx}`} className="px-3 py-1 bg-secondary text-sm rounded">
+          <span key={`${tech}-${idx}`} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 bg-secondary text-[10px] sm:text-xs md:text-sm rounded flex-shrink-0">
             {tech}
           </span>
         ))}
