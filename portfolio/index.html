@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10141a" />
+    <meta
+      name="description"
+      content="Hanumant Jain — Software Developer and Full-Stack Engineer building scalable web applications and cloud-native services with React, Node.js, TypeScript, Python and AWS."
+    />
+    <meta property="og:title" content="Hanumant Jain — Full-Stack Engineer" />
+    <meta
+      property="og:description"
+      content="Scalable web apps, cloud-native services on AWS, and AI + Web3 experiments."
+    />
+    <meta property="og:type" content="website" />
+    <title>Hanumant Jain — Full-Stack Engineer</title>
+    <script>
+      // Apply the saved theme (dark by default) before first paint to avoid a flash. Mirrors src/theme.ts.
+      ;(function () {
+        var theme = 'dark'
+        try {
+          if (localStorage.getItem('theme') === 'light') theme = 'light'
+        } catch (e) {}
+        document.documentElement.dataset.theme = theme
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'light' ? '#f5f7fa' : '#10141a')
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
