@@ -1,0 +1,175 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+/* Colour palettes from the "Obsidian Cyber Technologist" design system (../obsidian_cyber_technologist/DESIGN.md).
+   Dark is the default; [data-theme='light'] on <html> swaps in the light palette (set by the inline script in
+   index.html and the header toggle). Elements with .theme-dark (3D panel, terminal, Deploy Lab) stay dark in
+   light mode, like code blocks on a light page. */
+:root,
+.theme-dark {
+  color-scheme: dark;
+  --surface: #10141a;
+  --surface-dim: #10141a;
+  --surface-bright: #353940;
+  --surface-container-lowest: #0a0e14;
+  --surface-container-low: #181c22;
+  --surface-container: #1c2026;
+  --surface-container-high: #262a31;
+  --surface-container-highest: #31353c;
+  --surface-variant: #31353c;
+  --surface-tint: #00dbe9;
+  --on-surface: #dfe2eb;
+  --on-surface-variant: #b9cacb;
+  --outline: #849495;
+  --outline-variant: #3b494b;
+  --primary: #dbfcff;
+  --primary-container: #00f0ff;
+  --on-primary-container: #006970;
+  --primary-fixed: #7df4ff;
+  --primary-fixed-dim: #00dbe9;
+  --secondary: #d0bcff;
+  --secondary-container: #571bc1;
+  --on-secondary-container: #c4abff;
+  --secondary-fixed: #e9ddff;
+  --secondary-fixed-dim: #d0bcff;
+  --tertiary: #d8ffe7;
+  --tertiary-container: #65f2b5;
+  --on-tertiary-container: #006d4a;
+  --error: #ffb4ab;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --surface: #f5f7fa;
+  --surface-dim: #e8ecf1;
+  --surface-bright: #ffffff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #eef2f6;
+  --surface-container: #e6ebf0;
+  --surface-container-high: #dde3ea;
+  --surface-container-highest: #d3dae2;
+  --surface-variant: #d3dae2;
+  --surface-tint: #00808c;
+  --on-surface: #10141a;
+  --on-surface-variant: #42525a;
+  --outline: #6b7a80;
+  --outline-variant: #b8c4c8;
+  --primary: #00525a;
+  --primary-container: #00808c;
+  --on-primary-container: #ffffff;
+  --primary-fixed: #006b75;
+  --primary-fixed-dim: #00808c;
+  --secondary: #6d28d9;
+  --secondary-container: #e9ddff;
+  --on-secondary-container: #5b21b6;
+  --secondary-fixed: #5b21b6;
+  --secondary-fixed-dim: #7c3aed;
+  --tertiary: #065f46;
+  --tertiary-container: #047857;
+  --on-tertiary-container: #ffffff;
+  --error: #b3261e;
+}
+
+/* `inline` makes utilities reference the palette variables directly, so they follow the active palette. */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-variant: var(--surface-variant);
+  --color-surface-tint: var(--surface-tint);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-error: var(--error);
+}
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, monospace;
+
+  --text-display: 56px;
+  --text-display--line-height: 64px;
+  --text-display--letter-spacing: -0.03em;
+  --text-display-mobile: 36px;
+  --text-display-mobile--line-height: 44px;
+  --text-headline-lg: 36px;
+  --text-headline-lg--line-height: 44px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-code-lg: 20px;
+  --text-code-lg--line-height: 28px;
+  --text-code-md: 14px;
+  --text-code-md--line-height: 22px;
+  --text-code-sm: 12px;
+  --text-code-sm--line-height: 18px;
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.06em;
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.08em;
+
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    background: var(--color-surface);
+  }
+  body {
+    @apply bg-surface font-sans text-body-md text-on-surface antialiased;
+    overscroll-behavior: none;
+  }
+  ::selection {
+    background: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary-container);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
