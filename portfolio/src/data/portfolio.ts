@@ -4,7 +4,7 @@ export const profile = {
   name: 'Hanumant Jain',
   handle: 'hanumant',
   brand: 'hanumant_jain',
-  role: 'Software Developer | Full-Stack Engineer',
+  role: 'Software Engineer | AI Developer',
   location: 'Pune, Maharashtra, India',
   email: 'hanumantj17@gmail.com',
   github: 'https://github.com/hanumantjain',
