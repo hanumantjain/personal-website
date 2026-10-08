@@ -6,7 +6,7 @@ export const profile = {
   brand: 'hanumant_jain',
   role: 'Software Engineer | AI Developer',
   location: 'Pune, Maharashtra, India',
-  email: 'hanumantj17@gmail.com',
+  email: 'hanumantjain17@gmail.com',
   github: 'https://github.com/hanumantjain',
   linkedin: 'https://www.linkedin.com/in/hanumant-jain/',
   resume: '/Hanumant_Jain_Resume.pdf',
